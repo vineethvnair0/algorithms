@@ -25,11 +25,12 @@ public class MergeSortWithOneArrayTest {
 
     @Test
     public void testSortForOdd(){
-        int[] a = {2,4,1,6,8,5,3,7};
-        int[] expected = {1,2,3,4,5,6,7,8};
+        int[] a = {2,4,1,8,5,3,7};
+        int[] expected = {1,2,3,4,5,7,8};
         int[] result = mergeSortWithOneArray.sort(a);
         assertArrayEquals(expected,result);
     }
+
     @Test
     public void testMergeSortEven(){
         int[] a = {2,4,1,6,8,5,3,7};
