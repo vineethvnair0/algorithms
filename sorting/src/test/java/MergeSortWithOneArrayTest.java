@@ -32,7 +32,7 @@ public class MergeSortWithOneArrayTest {
     }
 
     @Test
-    public void testMergeSortEven(){
+    public void testSortEven(){
         int[] a = {2,4,1,6,8,5,3,7};
         int[] result = mergeSortWithOneArray.sort(a);
         int[] expected = {1,2,3,4,5,6,7,8};
