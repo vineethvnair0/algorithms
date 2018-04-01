@@ -21,7 +21,7 @@ public class QuickSort {
         int pivot = arr[end];
         int pIndex = start;
         for (int i=start;i<end;i++){
-            if(arr[i]<pivot){
+            if(arr[i]<= pivot){
                 swap(arr,i,pIndex);
                 pIndex++;
             }
