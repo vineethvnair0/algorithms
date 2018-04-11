@@ -1,10 +1,7 @@
-public class QuickSort {
+public class QuickSort implements Sort{
 
     public int[] sort(int[] arr) {
-
-        if(arr == null)
-            throw new NullPointerException("Input cannot be null");
-
+        validateNull(arr);
         quickSort(arr,0,arr.length-1);
         return arr;
     }

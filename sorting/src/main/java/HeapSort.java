@@ -1,19 +1,18 @@
-public class HeapSort {
-    public void sort(int[] arr) {
-        if(null == arr) {
-            throw new NullPointerException("Input cannot be null");
+public class HeapSort implements Sort{
+    public int[] sort(int[] arr) {
+        validateNull(arr);
+        int n = arr.length-1;
+        for (int i=n/2;i>=0;i--){
+            maxHeapify(arr,n,i);
         }
-            int n = arr.length-1;
-            for (int i=n/2;i>=0;i--){
-                maxHeapify(arr,n,i);
-            }
 
-            for (int i=n;i>=0;i--){
-                int temp = arr[0];
-                arr[0] = arr[i];
-                arr[i] = temp;
-                maxHeapify(arr,i-1,0);
-            }
+        for (int i=n;i>=0;i--){
+            int temp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
+            maxHeapify(arr,i-1,0);
+        }
+        return arr;
     }
 
      void maxHeapify(int[] arr, int n, int i) {

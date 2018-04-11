@@ -1,7 +1,6 @@
-public class SelectionSort {
+public class SelectionSort implements Sort{
     public int[] sort(int[] arr) {
-        if(arr == null)
-            throw new NullPointerException("Input cannot be empty");
+        validateNull(arr);
         selectionSort(arr);
         return arr;
     }

@@ -1,9 +1,7 @@
-public class MergeSort {
+public class MergeSort implements Sort{
 
     public int[] sort(int[] arr) {
-
-        if(arr == null)
-            throw new NullPointerException("Input cannot be empty");
+         validateNull(arr);
          mergeSort(arr,0,arr.length-1);
          return arr;
     }

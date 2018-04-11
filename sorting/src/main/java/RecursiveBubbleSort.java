@@ -1,8 +1,7 @@
-public class RecursiveBubbleSort {
+public class RecursiveBubbleSort implements Sort{
 
     public int[] sort(int[] arr) {
-        if(null == arr)
-            throw new NullPointerException("Input cannot be empty");
+        validateNull(arr);
         bubbleSort(arr,arr.length);
 
         return arr;

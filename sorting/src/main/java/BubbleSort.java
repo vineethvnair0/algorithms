@@ -1,9 +1,7 @@
-public class BubbleSort {
+public class BubbleSort implements Sort{
     public int[] sort(int[] arr) {
-        if(arr == null)
-            throw new NullPointerException("Input cannot be empty");
+        validateNull(arr);
         bubbleSort(arr);
-
         return arr;
     }
 

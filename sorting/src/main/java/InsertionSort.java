@@ -1,8 +1,7 @@
-public class InsertionSort {
+public class InsertionSort implements Sort {
 
     public int[] sort(int[] arr) {
-        if(arr == null)
-            throw new NullPointerException("Input array cannot be null");
+        validateNull(arr);
         for (int i=1;i<arr.length;i++){
             int key = arr[i];
             int j = i-1;

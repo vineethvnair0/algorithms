@@ -1,10 +1,9 @@
-public class MergeSortWithOneArray {
+public class MergeSortWithOneArray implements Sort{
 
     int[] helper;
 
     public int[] sort(int[] arr) {
-        if(arr == null)
-            throw new NullPointerException("Input cannot be null");
+        validateNull(arr);
         helper = new int[arr.length];
         mergeSort(arr,0,arr.length-1);
         return arr;
