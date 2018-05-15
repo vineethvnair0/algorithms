@@ -1,9 +1,7 @@
-public class MaxSumNoAdjacent {
+public class MaxSumNoAdjacent implements Algorithms{
 
     public int getMax(int[] arr) {
-        if((null == arr) ||(0 == arr.length)){
-            throw new NullPointerException("Input cannot be empty");
-        }
+        validate(arr);
         int inSum = arr[0];
         int exSum = 0;
         int exTemp;
